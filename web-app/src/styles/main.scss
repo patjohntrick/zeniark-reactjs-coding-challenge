@@ -1,26 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+$mediumElectricBlue: #085696;
+$mediumElectricBlue-50: rgba(0, 83, 147, 0.83);
+$white: #fff;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
 .App {
-  background-color: #eee;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-content: center;
+  // background-color: #085696;
+  // min-height: 100vh;
+  // display: flex;
+  // justify-content: center;
+  // align-content: center;
+  // overflow: hidden;
+  // width: 90%;
+}
+
+.card-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $white;
+  border-radius: 5px;
+  padding: 20px;
+  width: 700px;
+}
+
+.card-inner-container {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.img-logo {
+  width: 300px;
+  height: 91px;
+  object-fit: contain;
+}
+
+.challenge-container {
+  margin: 20px 0 30px 0;
+}
+
+.score-question {
+  color: $white;
+  background-color: $mediumElectricBlue;
+  border-radius: 5px;
+  padding: 10px 0;
+  width: 300px;
+  margin: 20px auto;
+  // font-size: px;
 }
 
 .page {
-  width: 600px;
-  max-width: 100%;
-  margin: 0 auto;
-  min-height: 100vh;
-  padding: 2rem;
-  background: #fff;
+  // width: 600px;
+  // max-width: 100%;
+  // margin: 0 auto;
+  // min-height: 100vh;
+  // // padding: 2rem;
+  // background: #fff;
 
-  &-title h1 {
-    text-align: center;
-  }
+  // &-title h1 {
+  //   text-align: center;
+  // }
 
-  &-control {
-    display: flex;
-    justify-content: center;
-    margin-top: 2rem;
-  }
+  // &-control {
+  //   display: flex;
+  //   justify-content: center;
+  //   margin-top: 2rem;
+  // }
 }
+
+// .container {
+//     position: 'relative';
+//     background-color: $backgroundColor;
+//     width: 100vw;
+//     height: 100vh;
+// }

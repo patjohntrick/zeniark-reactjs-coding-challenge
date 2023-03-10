@@ -1,0 +1,18 @@
+$mediumElectricBlue: #085696;
+$mediumElectricBlue-50: rgba(0, 83, 147, 0.83);
+$white: #fff;
+
+button {
+  background-color: $white;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid $mediumElectricBlue;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+.link-text {
+  color: $mediumElectricBlue;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+}

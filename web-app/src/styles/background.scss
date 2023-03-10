@@ -1,0 +1,22 @@
+$mediumElectricBlue: #085696;
+$mediumElectricBlue-80: rgba(0, 83, 147, 0.83);
+
+.container {
+  position: 'relative';
+  background-color: $mediumElectricBlue-80;
+  min-width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  // display: flex;
+  // justify-content: center;
+  // align-content: center;
+}
+.img-style {
+  position: absolute;
+  width: 450px;
+  height: 700px;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  object-fit: cover;
+}
