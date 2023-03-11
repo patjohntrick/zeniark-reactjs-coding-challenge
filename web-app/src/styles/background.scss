@@ -3,12 +3,7 @@ $mediumElectricBlue-80: rgba(0, 83, 147, 0.83);
 
 .container {
   position: 'relative';
-  min-width: 100vw;
   height: 100vh;
-  // overflow: hidden;
-  // display: flex;
-  // justify-content: center;
-  // align-content: center;
 }
 .img-style {
   position: fixed;
@@ -27,5 +22,5 @@ $mediumElectricBlue-80: rgba(0, 83, 147, 0.83);
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 100px 0;
+  padding: 100px;
 }

@@ -31,8 +31,9 @@ export const QuizPage = () => {
   };
 
   const handleClick = (userAnswer) => {
-    if (questionNumber + 1 >= 10) {
+    if (questionNumber >= 9) {
       setQuestionNumber(0);
+      setUserAnswers((prevUserState) => [...prevUserState, userAnswer]);
       navigate('result/');
     } else {
       scoreCounter(userAnswer);
@@ -47,6 +48,8 @@ export const QuizPage = () => {
       questions[questionNumber],
     ]);
   }, [questionNumber]);
+
+  console.log('userAnswers: ', userAnswers);
 
   return (
     <StyledCard>
