@@ -1,3 +1,5 @@
+import React from 'react';
+
 import background from '../images/logo.png';
 import '../styles/questionCard.scss';
 

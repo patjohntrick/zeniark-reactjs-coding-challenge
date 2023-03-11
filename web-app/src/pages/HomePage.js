@@ -1,4 +1,4 @@
-import React, { useCallback, useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect } from 'react';
 
 import '../styles/main.scss';
 import { Strings, data } from '../constant';
@@ -6,7 +6,6 @@ import { StyledButton, StyledCard } from '../components';
 import logo from '../images/zeniark-logo.png';
 import { AppContext } from '../App';
 import { useRandomQuestions } from '../hooks';
-import { useLocation } from 'react-router-dom';
 
 const {
   LETS_START,
@@ -16,7 +15,7 @@ const {
 } = Strings;
 
 export const HomePage = () => {
-  const { setQuestions, questions } = useContext(AppContext);
+  const { setQuestions } = useContext(AppContext);
   const { randomData } = useRandomQuestions(data);
 
   const randomQestions = () => {
@@ -29,8 +28,6 @@ export const HomePage = () => {
     setQuestions(randomData);
     randomQestions();
   }, []);
-
-  // console.log('questions: ', questions);
 
   return (
     <StyledCard>

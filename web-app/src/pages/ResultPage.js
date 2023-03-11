@@ -3,9 +3,9 @@ import { useContext } from 'react';
 import { AiOutlineCheck } from 'react-icons/ai';
 import { FaTimes } from 'react-icons/fa';
 
+import '../styles/resultPage.scss';
 import { StyledButton, StyledCard, StyledHeaderCard } from '../components';
 import { AppContext } from '../App';
-import '../styles/resultPage.scss';
 
 export const ResultPage = () => {
   const {
@@ -16,7 +16,6 @@ export const ResultPage = () => {
     userAnswers,
     setUserAnswers,
   } = useContext(AppContext);
-  //   const ss = finalTenQuestions.shift();
 
   const handleReset = () => {
     setScore(0);
@@ -24,7 +23,6 @@ export const ResultPage = () => {
     setUserAnswers([]);
   };
 
-  console.log(finalTenQuestions);
   return (
     <StyledCard>
       <div className='result-inner-card'>

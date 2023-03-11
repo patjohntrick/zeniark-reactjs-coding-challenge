@@ -1,9 +1,9 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { AiOutlineCheck } from 'react-icons/ai';
 import { FaTimes } from 'react-icons/fa';
 
 import '../styles/questionCard.scss';
-import { StyledCard } from './StyledCard';
 import background from '../images/logo.png';
 import { useState } from 'react';
 

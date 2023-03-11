@@ -1,14 +1,12 @@
-import { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AiOutlineCheck } from 'react-icons/ai';
 import { FaTimes } from 'react-icons/fa';
 
-import { AppContext } from '../App';
-
 import '../styles/questionCard.scss';
+import { AppContext } from '../App';
 import { StyledCard, StyledHeaderCard } from '../components';
-
-import { buttonOptions, data } from '../constant';
+import { buttonOptions } from '../constant';
 
 export const QuizPage = () => {
   const [questionNumber, setQuestionNumber] = useState(0);
@@ -48,8 +46,6 @@ export const QuizPage = () => {
       questions[questionNumber],
     ]);
   }, [questionNumber]);
-
-  console.log('userAnswers: ', userAnswers);
 
   return (
     <StyledCard>

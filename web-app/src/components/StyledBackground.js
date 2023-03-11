@@ -1,3 +1,5 @@
+import React from 'react';
+
 import '../styles/background.scss';
 import background from '../images/background-logo.png';
 
