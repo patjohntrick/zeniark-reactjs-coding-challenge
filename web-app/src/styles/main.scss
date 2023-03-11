@@ -22,14 +22,15 @@ $white: #fff;
 }
 
 .card-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  // position: absolute;
+  // top: 50%;
+  // left: 50%;
+  // transform: translate(-50%, -50%);
   background-color: $white;
   border-radius: 5px;
   padding: 20px;
-  width: 700px;
+  min-width: 700px;
+  max-width: 1000px;
 }
 
 .card-inner-container {

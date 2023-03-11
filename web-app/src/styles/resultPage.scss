@@ -1,0 +1,67 @@
+$mediumElectricBlue: #085696;
+$mediumElectricBlue-50: rgba(0, 83, 147, 0.83);
+$white: #fff;
+$kellyGreen: #4fbd1b;
+$flame: #e04e10;
+
+.question-checked {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.1);
+  padding: 20px 0;
+}
+
+.question-checked p {
+  font-style: italic;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.question-checked p .correct-answer {
+  font-weight: 600;
+}
+
+.result-inner-card {
+  padding: 0 40px;
+}
+
+.check-icon {
+  color: $kellyGreen;
+  font-size: 24px;
+}
+
+.cross-icon {
+  color: $flame;
+  font-size: 24px;
+}
+
+.result-icon {
+  margin-left: 50px;
+}
+
+.score-container {
+  padding: 50px;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.score-container h3 {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 7px;
+}
+
+.score-container p {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: -10px;
+}
+
+.result-btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
