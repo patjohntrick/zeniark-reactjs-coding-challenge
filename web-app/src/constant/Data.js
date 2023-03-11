@@ -144,7 +144,7 @@ export const data = [
     type: 'boolean',
     difficulty: 'easy',
     question:
-      'In Pok&eacute;mon Sun and Moon, a male Salandit can evolve to a Salazzle.',
+      'In Pokemon Sun and Moon, a male Salandit can evolve to a Salazzle.',
     correct_answer: 'False',
     incorrect_answers: ['True'],
   },
