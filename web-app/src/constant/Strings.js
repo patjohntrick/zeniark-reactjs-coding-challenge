@@ -5,4 +5,5 @@ export const Strings = {
   SCORE_QUESTION: 'Can you score 10/10?',
   LETS_START: `LET'S START`,
   PLAY_AGAIN: 'PLAY AGAINn',
+  ERROR: 'Unfortunately, all of your answer will going to be reset.',
 };
