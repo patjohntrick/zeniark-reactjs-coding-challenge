@@ -1,11 +1,12 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useCallback, useContext, useEffect, useState } from 'react';
 
 import '../styles/main.scss';
-import { useRandomQuestions } from '../hooks';
-import { data, Strings } from '../constant';
+import { Strings, data } from '../constant';
 import { StyledButton, StyledCard } from '../components';
 import logo from '../images/zeniark-logo.png';
+import { AppContext } from '../App';
+import { useRandomQuestions } from '../hooks';
+import { useLocation } from 'react-router-dom';
 
 const {
   LETS_START,
@@ -15,10 +16,22 @@ const {
 } = Strings;
 
 export const HomePage = () => {
-  const { isError, randomData } = useRandomQuestions(data);
+  const { setQuestions, questions } = useContext(AppContext);
+  const { randomData } = useRandomQuestions(data);
 
-  console.log('isError: ', isError);
-  console.log(randomData);
+  const randomQestions = () => {
+    for (let i = 0; i < data.length; i++) {
+      let randomNumber = Math.floor(Math.random() * data.length);
+      setQuestions((prevState) => [...prevState, randomNumber]);
+    }
+  };
+  useEffect(() => {
+    setQuestions(randomData);
+    randomQestions();
+  }, []);
+
+  // console.log('questions: ', questions);
+
   return (
     <StyledCard>
       <div className='card-inner-container'>
