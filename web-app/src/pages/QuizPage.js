@@ -1,5 +1,5 @@
-import { useContext, useEffect, useMemo, useState } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useContext, useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { AiOutlineCheck } from 'react-icons/ai';
 import { FaTimes } from 'react-icons/fa';
 
@@ -7,9 +7,8 @@ import { AppContext } from '../App';
 
 import '../styles/questionCard.scss';
 import { StyledCard, StyledHeaderCard } from '../components';
-import background from '../images/logo.png';
+
 import { buttonOptions, data } from '../constant';
-import { useRandomQuestions } from '../hooks';
 
 export const QuizPage = () => {
   const [questionNumber, setQuestionNumber] = useState(0);
@@ -36,8 +35,8 @@ export const QuizPage = () => {
       setQuestionNumber(0);
       navigate('result/');
     } else {
-      setUserAnswers((prevUserState) => [...prevUserState, userAnswer]);
       scoreCounter(userAnswer);
+      setUserAnswers((prevUserState) => [...prevUserState, userAnswer]);
       setQuestionNumber(questionNumber + 1);
     }
   };
