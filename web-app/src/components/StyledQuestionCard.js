@@ -5,6 +5,7 @@ import { FaTimes } from 'react-icons/fa';
 import '../styles/questionCard.scss';
 import { StyledCard } from './StyledCard';
 import background from '../images/logo.png';
+import { useState } from 'react';
 
 export const StyledQuestionCard = ({
   category,
@@ -13,7 +14,8 @@ export const StyledQuestionCard = ({
   onClick,
   to,
 }) => {
-  const userAnswer = '';
+  const [userAnswer, setUserAnswer] = useState(false);
+  console.log(userAnswer);
   return (
     <div>
       <div className='question-card-container'>
@@ -27,13 +29,19 @@ export const StyledQuestionCard = ({
         <p className='question'>{question}</p>
       </div>
       <div className='question-button-container'>
-        <button className='question-button button-true'>
+        <button
+          className='question-button button-true'
+          onClick={() => setUserAnswer(true)}
+        >
           <AiOutlineCheck className='icon' />
           <Link to={to} className='button-text'>
             True
           </Link>
         </button>
-        <button className='question-button button-false'>
+        <button
+          className='question-button button-false'
+          onClick={() => setUserAnswer(false)}
+        >
           <FaTimes className='icon' />
           <Link to={to} className='button-text'>
             False
